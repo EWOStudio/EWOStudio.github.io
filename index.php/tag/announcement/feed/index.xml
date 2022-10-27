@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Announcement &#8211; EWO Studio</title>
+	<atom:link href="https://blog.ewo.org.cn/index.php/tag/announcement/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.ewo.org.cn/</link>
+	<description>新生代技术与交流小组</description>
+	<lastBuildDate>Wed, 26 Oct 2022 11:07:22 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>https://blog.ewo.org.cn/wp-content/uploads/2022/10/cropped-favicon-32x32.png</url>
+	<title>Announcement &#8211; EWO Studio</title>
+	<link>https://blog.ewo.org.cn/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>入组说明</title>
+		<link>https://blog.ewo.org.cn/index.php/2022/10/20/2/</link>
+					<comments>https://blog.ewo.org.cn/index.php/2022/10/20/2/#respond</comments>
+		
+		<dc:creator><![CDATA[merry]]></dc:creator>
+		<pubDate>Thu, 20 Oct 2022 11:00:51 +0000</pubDate>
+				<category><![CDATA[Announcement]]></category>
+		<guid isPermaLink="false">https://blog.ewo.org.cn/?p=9</guid>
+
+					<description><![CDATA[小组介绍 EWO组织由迷离成立于2020年5月，起初作为Minecraft同好者的普通交流小组，2021年经多 [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h3>小组介绍</h3>
+<p>EWO组织由迷离成立于2020年5月，起初作为Minecraft同好者的普通交流小组，2021年经多次解散重组，于2022年走上正轨，转型为半技术小组，现有成员八十余人，致力于Mod开发与搬运，地图创作，周边创作。<br />
+我们秉持开放与和谐的理念，组内任何人都可畅所欲言。<br />
+这里是一个平等开放的交流之地，同时也是一群热爱Minecraft，并愿意为这个社区做出贡献的人的聚集地。</p>
+<h3>关于招新</h3>
+<p>我们欢迎热爱Minecraft，愿意为这个社区做出贡献，并且持积极心态的人加入。<br />
+由于入组标准难以界定，且存在一些门槛与考核，若想加入我们，请前往审核QQ群：858263010。<br />
+若您有相关领域的作品，请在进入审核群后展示您的作品并介绍自己。这些材料将作为辅助判断标准。若您在MCBBS拥有账号，请同时提供账号信息与UID。<br />
+进行完以上流程后我们会开启成员投票，若在现任组员中支持率超过百分之六十五即可进入成为实习组员。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.ewo.org.cn/index.php/2022/10/20/2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Docs &#8211; EWO Studio</title>
+	<atom:link href="https://blog.ewo.org.cn/index.php/category/docs/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.ewo.org.cn/</link>
+	<description>新生代技术与交流小组</description>
+	<lastBuildDate>Thu, 27 Oct 2022 13:02:55 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>https://blog.ewo.org.cn/wp-content/uploads/2022/10/cropped-favicon-32x32.png</url>
+	<title>Docs &#8211; EWO Studio</title>
+	<link>https://blog.ewo.org.cn/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Git快速入门</title>
+		<link>https://blog.ewo.org.cn/index.php/2022/10/23/3/</link>
+					<comments>https://blog.ewo.org.cn/index.php/2022/10/23/3/#respond</comments>
+		
+		<dc:creator><![CDATA[merry]]></dc:creator>
+		<pubDate>Sun, 23 Oct 2022 15:45:45 +0000</pubDate>
+				<category><![CDATA[Docs]]></category>
+		<guid isPermaLink="false">https://blog.ewo.org.cn/?p=11</guid>
+
+					<description><![CDATA[Git概述 Git仓库是目前开源软件(Open Source Softwares)发布的一种重要途径，也是团队 [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h3>Git概述</h3>
+<p>Git仓库是目前开源软件(Open Source Softwares)发布的一种重要途径，也是团队协作的一种重要手段，可以帮助用户轻易找到每一次提交的文件不同之处，还可以帮助用户快速定位目标代码等等。当然，把GitHub当图床的操作个人并不提倡。<br />
+日常操作包括建立仓库，提交(Commit)，上传(Push)，克隆(Clone)，提交PR，提出Issue以及发布Release等。</p>
+<h3>说明</h3>
+<p>熟悉Git操作，无论是使用GUI，还是通过命令行，效果都是一样的。<br />
+该文档针对毫无命令行基础，毫无Git操作经验，或者想要查阅具体方法的。<br />
+作者本人是习惯于使用命令行，这个操作并不复杂。实际上，仅仅只需要记住几个常用命令与用法，就可以熟练掌握。本文将主要介绍命令行操作。</p>
+<h3>基本操作</h3>
+<h4>安装Git环境</h4>
+<p>首先到<a href="https://git-scm.com/downloads">Git官网</a>下载Git，Windows版包括Git Bash和Git GUI，具体安装过程中，可以无脑点下一步。<br />
+macOS用户可以下载Xcode得到Git环境，如果不能接受Xcode的体积，可以安装HomeBrew，在该过程中即可得到Git。并不建议下载Git安装包成品。<br />
+Linux用户的安装方法，在官方下载页面有详细说明。</p>
+<h4>建立仓库</h4>
+<p>首先需要知道仓库有两种形式，一种是<strong>本地仓库</strong>，还有一种是<strong>远端仓库</strong>。<br />
+本地仓库是指在<strong>本地建立</strong>的，或者是通过<strong>克隆</strong>得到的仓库。</p>
+<h5>本地仓库的建立方法(命令行)</h5>
+<p>首先确定目标文件夹的位置。该文件夹将要存放需要提交的内容。<br />
+对于已经升级到了Win11的用户，可以右键目标文件夹，单击“在Windows Terminal中打开”。或者单击“显示更多选项”后，单击&quot;Git Bash Here&quot;。这两种方法都可以调出一个命令窗口。Win10用户则可以直接右键，在右键菜单内单击&quot;Git Bash Here&quot;。<br />
+对于macOS用户，可以安装<a href="https://github.com/jbtule/cdto">cd to</a>来实现通过右键菜单来在该文件夹下调用终端。<br />
+对于Linux用户，因为作者是屑水果用户，所以不是很了解。我相信用着Linux的用户对终端的熟悉程度肯定比我高。<br />
+当然，这三个平台的用户完全可以自建命令行窗口，然后手动键入cd命令转到该文件夹下，但是有点麻烦。不过好在有Tab自动补全，操作起来会轻松许多。<br />
+还有一种办法就是使用VSCode终端。作者本人用的是macOS版的，并不了解Windows版的机制，但是想必大差不差。在VSCode的工具栏中有一个终端下拉菜单，点击新建终端。如果没有到目标文件夹，可以cd到该文件夹下。<br />
+键入以下命令后按下回车键执行，以初始化本地仓库：</p>
+<pre><code class="language-Shell">git init</code></pre>
+<p>该过程将在目标文件夹下建立名为“.git”的隐藏文件夹。至此本地仓库即已建立完毕。</p>
+<h5>远端仓库建立方法</h5>
+<p>在<strong>基于Git的代码托管平台</strong>上，如<strong>GitHub</strong>、<strong>Gitee</strong>等，这里以GitHub为例。<br />
+先访问<a href="https://github.com/">GitHub</a>。如果你还没有账号，可以先去注册。登录后，如果你找不到怎么创建仓库，可以点<a href="https://github.com/new">这个</a>。当然了，我不希望你会因为这样的问题而苦恼。小组成员如想把仓库放在<a href="https://github.com/ewostudio">组织</a>内，可以联系作者或者迷离来加入组织。<br />
+仓库建立过程可以参考建立页面的侧边注释。<br />
+在以上流程走完后，即可得到<strong>远端仓库</strong>。</p>
+<h5>令本地仓库与远端仓库建立联系</h5>
+<p>这里分三种情况，即：只建立了本地仓库，只建立了远端仓库，本地与远端都建立了。<br />
+如果你只建立了本地的仓库，我墙裂建议你同时建立远端的。这样只有后两类情形的了。<br />
+在建立联系之前，需要先指定终端使用的账户。如果不指定，将会在未来每一次操作远端时，都询问你的账号与密码。</p>
+<h5>指定账户并创建SSH密钥</h5>
+<p>在刚刚打开的命令窗口中，分别复制以下两条命令，修改为你自己的信息后执行。<br />
+请注意，只有Git Bash会遇到的问题是，Ctrl+V并不是粘贴，需要改为Shift+Insert。</p>
+<pre><code class="language-Shell">git config --global user.name &quot;这里改成用户名，引号留着&quot;
+git config --global user.email &quot;这里改成邮箱，引号留着&quot;</code></pre>
+<p>用户名是GitHub用户名，邮箱填注册时使用的邮箱。<br />
+接下来我不得不说一下创建<strong>SSH密钥</strong>的必要性。GitHub功能上比国内的Gitee丰富，更加实用，至少我目前还是不会使用Gitee的搜索功能，GitHub在这方面比Gitee强了不知道多少。但是目前国内的网络环境不好，GitHub在国内解析为新加坡微软云，而该通道在国内因为有重重阻力的作用，导致了GitHub日常抽风。有时候使用移动数据流量也许会好很多，但是这并不是一定的。使用修改Hosts的方法可能会对这种情况有改善。详情请参阅<a href="https://www.bilibili.com/read/cv10607526/">github直连访问方法，长期更新的github hosts</a>。<br />
+但是，GitHub的SSH通道却基本上不会遇到该问题，较为稳定。但是要用SSH通道，需要有认证的密钥。这样就很有必要创建一个SSH密钥了。但是这个通道只能用来做基本的克隆和提交，并不能完全替代浏览器。<del>其实，终极解决方案，就是钞能力。</del><br />
+在终端中粘贴以下命令，并修改为你自己的信息。</p>
+<pre><code class="language-Shell">ssh-keygen -t rsa -C &quot;这里改成注册使用的邮箱，引号留着&quot;</code></pre>
+<p>然后我建议敲三次回车。如果该过程没有结束，那就再来一次。<br />
+接下来，在你的个人文件夹下找到.ssh文件夹。个人文件夹在Windows中，就是在C:\Users\文件夹下找到你的用户名并点开后到达的文件夹。在macOS中，打开一个Finder窗口，然后按Shift+Command+H组合键即可到达。在Linux中应该是不需要我讲的。“.ssh”文件夹一般是隐藏的。Windows用户可以直接在地址栏修改地址，并直接定位到该文件夹下。macOS用户如果没有打开显示隐藏文件功能，则可以按下Shift+Command+G，然后在英文输入法下键入：</p>
+<pre><code class="language-Shell">~/.ssh</code></pre>
+<p>或者可以直接复制粘贴。Linux用户应该不需要讲解。<br />
+在该文件夹下，有一个叫做id_rsa.pub的文件。Windows用户可以用记事本打开，macOS用户可以使用文本编辑打开，macOS和Linux用户还可以用vim编辑器，具体不再展开。打开后，复制所有内容，然后访问GitHub，点击页面右上角你的头像，然后在下拉菜单内找到Settings并点开。跳转页面后，左侧有选项卡菜单，找到<strong>SSH and GPG keys</strong>并点击，在右侧栏中可以找到SSH keys的选项，在同一行的最右边，有<strong>New SSH key</strong>的按钮。点击后，跳转出的页面中的Title框里面可以随便写，咏e也可以。在下面的Key里面粘贴你刚刚复制的内容，点击<strong>Add SSH key</strong>就完成了。这个SSH key只能在该机器上使用，如果换了电脑是需要重新走流程的。</p>
+<h6>如果你只建立了远端仓库</h6>
+<p>回到刚刚说的这个建立联系。建立了远端仓库，可以省去建立本地仓库的麻烦。在仓库页面中，如果没有添加文件，是空的库，页面上将会有一些指导性的命令提示。其中会有一个直接使用地址，有什么HTTPS，SSH的按钮。由于刚刚添加了SSH密钥，可以直接点击SSH之后，拿到地址，格式是：git@github.com:**，这个地址是可以直接点击地址后方的复制按钮直接复制下来的，点击一下复制。<br />
+接下来，打开终端，你需要确定好你的本地仓库的位置，如Windows用户，比如说想要把这个仓库放在桌面上，那么可以在桌面上右键打开Windows终端或者开Git Bash。其他平台用户也一样。打开命令窗口后，键入：</p>
+<pre><code class="language-Shell">git clone </code></pre>
+<p>然后把刚刚复制的地址粘贴上去。clone和地址之间是有空格的。该命令执行完后，远端的仓库会被直接完全克隆下来。然后打开生成的文件夹，这个就是仓库文件夹。该操作称为<strong>克隆仓库</strong>。<br />
+如果已经加了Licence，以及.gitignore之类的文件，界面上将有一个绿色的Code按钮，点击后选择SSH，直接复制地址，接下来的操作与刚才的相同。</p>
+<h6>如果都建立了</h6>
+<p>打开你的仓库文件夹，然后调出命令行窗口，然后键入：</p>
+<pre><code class="language-Shell">git remote add origin </code></pre>
+<p>这还没完，然后再复制远端仓库地址，然后粘贴到命令窗口上并执行。地址和origin之间是有空格的。<br />
+至此，本地仓库已经和远端仓库建立了联系。</p>
+<h4>提交</h4>
+<p>首先讲一下Git提交机制。Git仓库采用版本差异的机制，使得两次相邻的提交之间的差异能够轻易找到。实际上，在上传到远端仓库之前，需要进行<strong>本地提交</strong>。本地提交机制与在远端直接提交的机制类似，但是不理解机制的可能会认为本地执行了commit命令后远端应该也会立即同步。<br />
+首先你需要把改动完的文件都放置在本地仓库的对应位置中。该过程完毕后，才能进行本地提交，这需要需要先将准备提交的文件存入暂存区。这个过程操作的文件一般比较多，我的建议是，先行键入：</p>
+<pre><code class="language-Shell">git add </code></pre>
+<p>然后再打一个空格。我相信在这个仓库文件夹里的文件应该都是要提交上传的，所以可以直接在文件夹下把除了.git的所有文件，包括文件夹，一起直接拖进终端，然后敲回车执行。<br />
+这时候你就需要检查是不是多放了什么文件，不然等会提交(commit)了之后，再想要撤回，就很麻烦了。<br />
+检查无误后(当然，不检查一般也没什么事情)，就可以直接键入：</p>
+<pre><code class="language-Shell">git commit -m &quot;自行给出理由，引号留着&quot;</code></pre>
+<p>第一次提交一般可以写Initial Commit，但这不是绝对的。<br />
+当然，你也可以直接输入：</p>
+<pre><code class="language-Shell">git commit</code></pre>
+<p>但是接下来你需要使用vim编辑器来编辑理由，vim对于新手来说也许是很吓人的，因此并不推荐这么做。<br />
+请注意，提交时的说明是极为严肃的，不然一旦别人接手了仓库，发现这么一堆东西，想必也不太好受，而且会极大地降低工作效率。<br />
+这时，本地提交就已经完成了。</p>
+<h4>上传</h4>
+<p>本地提交之后，因为本地仓库与远端仓库仅仅只是有联系，而不是实时同步的，所以需要手工上传同步，即Push操作。<br />
+如果这是你第一次提交，你还需要指定分支：</p>
+<pre><code class="language-Shell">git branch -M master</code></pre>
+<p>分支名一般是master，也可以是main，如果不是多分支，建议使用这两种名称，但是也并不是强行要求，因为分支名称并不是一定需要是这两种的。<br />
+第一次提交指的是由空仓库状态转为有对象的过程，如添加Licence，添加Readme，或者是直接把该有的东西都提交。如果你的远端仓库已经有了Licence等，那么这就已经不是第一次提交了，如果是这样的情形，且本地提交前的仓库并不和远端同步，那么你应当进行一次Pull操作：</p>
+<pre><code class="language-Shell">git pull</code></pre>
+<p>如果不是第一次提交，pull/clone后应当会直接自动指定分支。在GitHub上一开仓库就创建了Licence等文件的仓库，一般指定的是main分支，因此如果再次指定分支，且名称不同，很可能会导致多分支的出现，而很容易导致混乱。实例是这样的：前不久有一个称作<a href="https://github.com/AzureDoom/MCDoom">MCDoom</a>的仓库需要PR，我拿到的是对应fabric1.19分支的一个文件，但是仓库主设定了1.18是主分支，这就导致我操作仓库的时候遇到困难，后来才发现是分支的问题。<br />
+在此之后，键入：</p>
+<pre><code class="language-Shell">git push -u origin master</code></pre>
+<p>这里的master并不是固定的，这个参数因分支而定。比如你向main分支进行了一次提交，那么你应当把master改成main。<br />
+至此，本地仓库就和远端仓库实现了同步。</p>
+<h4>撤销操作</h4>
+<p>这一块需要分几种情况。</p>
+<h5>如果不小心把不需要的东西添加进了暂存区，但是还没有提交…</h5>
+<p>键入：</p>
+<pre><code>git reset HEAD</code></pre>
+<p>后，打一个空格，然后再把这个不需要的文件拖进去。</p>
+<h5>如果不小心提交了，还没有push…</h5>
+<p>键入：</p>
+<pre><code>git rm</code></pre>
+<p>后，打一个空格，再把这个文件拖进去。然后再执行一次commit(提交)操作。</p>
+<h6>如果在这一步删错了…</h6>
+<p>键入：</p>
+<pre><code>git checkout --</code></pre>
+<p>后，再打一个空格，然后键入删错的文件名，可以直接恢复到刚刚提交时的状态。</p>
+<h5>如果已经push了…</h5>
+<p>并不建议回退版本，因为这样很可能会出问题。建议再次提交覆盖。如果真的想要回退版本，请查阅相关资料。</p>
+<h4>克隆</h4>
+<p>在前面，已经提到过了其基本操作。<br />
+在浏览器上，你看到了某一个需要进行克隆操作的仓库，在该页面上，有一个绿色的Code按钮，点击后选择SSH，直接复制地址。接下来，打开终端，你需要确定好克隆仓库需要放置的位置，如Windows用户，比如说想要把这个仓库放在桌面上，那么可以在桌面上右键打开Windows终端或者开Git Bash。其他平台用户也一样。打开命令窗口后，键入：</p>
+<pre><code class="language-Shell">git clone </code></pre>
+<p>然后把刚刚复制的地址粘贴上去。clone和地址之间是有空格的。该命令执行完后，远端的仓库会被直接完全克隆下来。然后打开生成的文件夹，这个就是仓库文件夹。该操作称为<strong>克隆仓库</strong>。<br />
+但是有时候事情并不是这么简单。比如刚刚讲述的那个<a href="https://github.com/AzureDoom/MCDoom">MCDoom</a>仓库，分支很多，直接执行git clone，虽然会将整个仓库所有文件都下载下来，但是你将只能得到fabric1.18分支，但是目标是fabric1.19，因此需要指定参数：</p>
+<pre><code class="language-Shell">git clone --branch fabric1.19 git@github.com:AzureDoom/MCDoom.git</code></pre>
+<p>在该实例中，指定了“--branch fabric1.19”参数，这将只下载fabric1.19分支。<br />
+还有一种方法，但是我并不推荐，因为如果这么做将无法提交：<br />
+在该浏览器页面上，左侧有一个分支，切换到需要的分支，然后在跳转到的页面上，有一个绿色的Code按钮，点击后点击Download Zip。这样你可以得到当前分支的所有文件。但是，这样做的坏处就是，损失了.git文件夹，这使得你将无法进行任何操作，包括PR。因为.git文件夹中存储了该仓库的所有提交信息与版本差异。失去了该文件夹，仓库也就失去了意义。</p>
+<h4>提交Pull Request</h4>
+<p>Pull Request，即请求仓库主拉取你提供的代码。虽然这听上去怪怪的，就好像是为其做免费苦力一样，<del>说不定还会被拒绝</del>。<br />
+回到正题，要做这个事情，你需要先fork源仓库到你自己名下。该按钮在靠近右上角你的头像那里。<br />
+然后，你需要把这个fork的仓库克隆下来。克隆操作我已经说明白了，应该不需要再讲了。然后把你要做的更改都做好，然后进行提交操作。提交操作我也讲得很明白了，应该也不需要我再讲什么了。但是要注意的是，这一次的提交理由可不能再敷衍了，因为这个提交是要给别人的，如果提交理由很随意，这将很可能导致仓库主拒绝执行合并操作。</p>
+<h4>提出Issue</h4>
+<p>开Issue是很正常的交流方式。该操作并不需要提出者有如何的技术力，只需要给该仓库提供建议即可。<br />
+提出Issue的方法很简单，GitHub中，在仓库页面标题下方选项卡栏中有Issues，点击进入后，找到绿色的New Issue按钮即可发布新的Issue。Issue有包括索要授权，提交Bug等的功能。</p>
+<h4>发布Release</h4>
+<p>如果你原创了什么东西，想要发布Release，在浏览器的仓库页中，右侧栏中有一个Releases按钮。点击后，在跳转到的页面上，你可以看到一个叫Create a new release的绿色按钮，接下来按照指引即可完成。</p>
+<h3>小结</h3>
+<p>这个文档到这里算是讲得七七八八了，没有任何图，仅仅只是凭我描述，不够直观，但是我自认为讲得很清楚了，我希望这个文档能够对你带来帮助。如有任何建议可以联系作者本人。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.ewo.org.cn/index.php/2022/10/23/3/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

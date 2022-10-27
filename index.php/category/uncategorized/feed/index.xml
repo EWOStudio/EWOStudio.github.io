@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>未分类 &#8211; EWO Studio</title>
+	<atom:link href="https://blog.ewo.org.cn/index.php/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blog.ewo.org.cn/</link>
+	<description>新生代技术与交流小组</description>
+	<lastBuildDate>Wed, 26 Oct 2022 13:58:35 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>https://blog.ewo.org.cn/wp-content/uploads/2022/10/cropped-favicon-32x32.png</url>
+	<title>未分类 &#8211; EWO Studio</title>
+	<link>https://blog.ewo.org.cn/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>小组博客测试</title>
+		<link>https://blog.ewo.org.cn/index.php/2022/10/12/1/</link>
+					<comments>https://blog.ewo.org.cn/index.php/2022/10/12/1/#respond</comments>
+		
+		<dc:creator><![CDATA[merry]]></dc:creator>
+		<pubDate>Tue, 11 Oct 2022 16:35:29 +0000</pubDate>
+				<category><![CDATA[未分类]]></category>
+		<guid isPermaLink="false">https://blog.ewo.org.cn/?p=13</guid>
+
+					<description><![CDATA[概述 感谢原域名持有者的大力支持与鼓励，并对本人进行了无私帮助，于是今天你组才有了域名。 该博文是本站第一篇博 [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h4>概述</h4>
+<p>感谢原域名持有者的大力支持与鼓励，并对本人进行了无私帮助，于是今天你组才有了域名。<br />
+该博文是本站第一篇博文，仅供测试。<br />
+本博客系统基于WordPress，并感谢Argon主题作者的无私奉献。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://blog.ewo.org.cn/index.php/2022/10/12/1/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
