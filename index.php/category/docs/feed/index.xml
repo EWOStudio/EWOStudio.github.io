@@ -12,13 +12,13 @@
 	<atom:link href="https://blog.ewo.org.cn/index.php/category/docs/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blog.ewo.org.cn/</link>
 	<description>新生代技术与交流小组</description>
-	<lastBuildDate>Thu, 27 Oct 2022 13:02:55 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 19 Jan 2023 09:01:18 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.3</generator>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
 
 <image>
 	<url>https://blog.ewo.org.cn/wp-content/uploads/2022/10/cropped-favicon-32x32.png</url>
@@ -37,19 +37,20 @@
 				<category><![CDATA[Docs]]></category>
 		<guid isPermaLink="false">https://blog.ewo.org.cn/?p=11</guid>
 
-					<description><![CDATA[Git概述 Git仓库是目前开源软件(Open Source Softwares)发布的一种重要途径，也是团队 [&#8230;]]]></description>
+					<description><![CDATA[Git概述 Git仓库是目前开源软件(Open Source Software)发布的一种重要途径，也是团队协 [&#8230;]]]></description>
 										<content:encoded><![CDATA[<h3>Git概述</h3>
-<p>Git仓库是目前开源软件(Open Source Softwares)发布的一种重要途径，也是团队协作的一种重要手段，可以帮助用户轻易找到每一次提交的文件不同之处，还可以帮助用户快速定位目标代码等等。当然，把GitHub当图床的操作个人并不提倡。<br />
+<p>Git仓库是目前开源软件(Open Source Software)发布的一种重要途径，也是团队协作的一种重要手段，可以帮助用户轻易找到每一次提交的文件不同之处，还可以帮助用户快速定位目标代码等等。当然，把GitHub当图床的操作个人并不提倡。<br />
 日常操作包括建立仓库，提交(Commit)，上传(Push)，克隆(Clone)，提交PR，提出Issue以及发布Release等。</p>
 <h3>说明</h3>
 <p>熟悉Git操作，无论是使用GUI，还是通过命令行，效果都是一样的。<br />
 该文档针对毫无命令行基础，毫无Git操作经验，或者想要查阅具体方法的。<br />
 作者本人是习惯于使用命令行，这个操作并不复杂。实际上，仅仅只需要记住几个常用命令与用法，就可以熟练掌握。本文将主要介绍命令行操作。</p>
 <h3>基本操作</h3>
-<h4>安装Git环境</h4>
-<p>首先到<a href="https://git-scm.com/downloads">Git官网</a>下载Git，Windows版包括Git Bash和Git GUI，具体安装过程中，可以无脑点下一步。<br />
+<h4>准备Git环境</h4>
+<p>首先到<a href="https://git-scm.com/downloads">Git官网</a>下载Git。当然了，如果从官网下载非常慢的话，可以选择镜像源，比如<a href="https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/">清华源</a>。<br />
+Windows版包括Git Bash和Git GUI，具体安装过程中，可以无脑点下一步。<br />
 macOS用户可以下载Xcode得到Git环境，如果不能接受Xcode的体积，可以安装HomeBrew，在该过程中即可得到Git。并不建议下载Git安装包成品。<br />
-Linux用户的安装方法，在官方下载页面有详细说明。</p>
+Linux用户的安装方法，在<a href="https://git-scm.com/download/linux">官方下载页面</a>有详细说明。</p>
 <h4>建立仓库</h4>
 <p>首先需要知道仓库有两种形式，一种是<strong>本地仓库</strong>，还有一种是<strong>远端仓库</strong>。<br />
 本地仓库是指在<strong>本地建立</strong>的，或者是通过<strong>克隆</strong>得到的仓库。</p>
@@ -83,7 +84,7 @@ git config --global user.email &quot;这里改成邮箱，引号留着&quot;</co
 在终端中粘贴以下命令，并修改为你自己的信息。</p>
 <pre><code class="language-Shell">ssh-keygen -t rsa -C &quot;这里改成注册使用的邮箱，引号留着&quot;</code></pre>
 <p>然后我建议敲三次回车。如果该过程没有结束，那就再来一次。<br />
-接下来，在你的个人文件夹下找到.ssh文件夹。个人文件夹在Windows中，就是在C:\Users\文件夹下找到你的用户名并点开后到达的文件夹。在macOS中，打开一个Finder窗口，然后按Shift+Command+H组合键即可到达。在Linux中应该是不需要我讲的。“.ssh”文件夹一般是隐藏的。Windows用户可以直接在地址栏修改地址，并直接定位到该文件夹下。macOS用户如果没有打开显示隐藏文件功能，则可以按下Shift+Command+G，然后在英文输入法下键入：</p>
+接下来，在你的个人文件夹下找到.ssh文件夹。个人文件夹在Windows中，就是在C:\Users\文件夹下找到你的用户名并点开后到达的文件夹。在macOS中，打开一个Finder窗口，然后按Shift+Command+H组合键即可到达。在Linux中应该是不需要我讲的，直接cd过去，cat一下就行。“.ssh”文件夹一般是隐藏的。Windows用户可以直接在地址栏修改地址，并直接定位到该文件夹下。macOS用户如果没有打开显示隐藏文件功能，则可以按下Shift+Command+G，然后在英文输入法下键入：</p>
 <pre><code class="language-Shell">~/.ssh</code></pre>
 <p>或者可以直接复制粘贴。Linux用户应该不需要讲解。<br />
 在该文件夹下，有一个叫做id_rsa.pub的文件。Windows用户可以用记事本打开，macOS用户可以使用文本编辑打开，macOS和Linux用户还可以用vim编辑器，具体不再展开。打开后，复制所有内容，然后访问GitHub，点击页面右上角你的头像，然后在下拉菜单内找到Settings并点开。跳转页面后，左侧有选项卡菜单，找到<strong>SSH and GPG keys</strong>并点击，在右侧栏中可以找到SSH keys的选项，在同一行的最右边，有<strong>New SSH key</strong>的按钮。点击后，跳转出的页面中的Title框里面可以随便写，咏e也可以。在下面的Key里面粘贴你刚刚复制的内容，点击<strong>Add SSH key</strong>就完成了。这个SSH key只能在该机器上使用，如果换了电脑是需要重新走流程的。</p>

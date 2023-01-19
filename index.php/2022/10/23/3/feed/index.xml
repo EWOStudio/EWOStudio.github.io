@@ -11,11 +11,11 @@
 	<atom:link href="https://blog.ewo.org.cn/index.php/2022/10/23/3/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blog.ewo.org.cn/index.php/2022/10/23/3/</link>
 	<description>新生代技术与交流小组</description>
-	<lastBuildDate>Thu, 27 Oct 2022 13:02:55 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 19 Jan 2023 09:01:18 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.3</generator>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
 </channel>
 </rss>
