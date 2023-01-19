@@ -1,0 +1,30 @@
+name: 问题报告
+description: 反馈明显的问题
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 博客问题反馈
+        注意你的问题也许已经被反馈过，建议先看Issues。
+
+  - type: dropdown
+    attributes:
+      label: 类型
+      options:
+        - 改进建议
+        - 其它
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 问题描述
+      description: 博文遇到了什么问题？需要如何改进？
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 截图
+      description: 添加截图以清晰指出问题。
+      placeholder: 可以将图片拖入该框内。
+    validations:
+      required: false
